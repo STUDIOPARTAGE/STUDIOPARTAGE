@@ -7,9 +7,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background-color: #034949
+            background-color: #034949;
         }
     </style>
+    <!-- Calendly Pop-up Widget -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen px-6">
 
@@ -24,16 +27,15 @@
         <div class="bg-white shadow-lg rounded-2xl p-8">
             <h1 class="text-3xl font-bold text-gray-900 mb-4">🚀 Scale Your Company with Social Media Ads</h1>
             <p class="text-gray-600 mb-6">We help companies get more leads, customers, and sales with data-driven advertising strategies.</p>
-            
-            <form action="https://formsubmit.co/sarah@studio-partage.com" method="POST" class="space-y-4">
-                <input type="text" name="name" placeholder="Your Name" class="w-full p-3 border rounded-lg" required>
-                <input type="email" name="email" placeholder="Your Email" class="w-full p-3 border rounded-lg" required>
-                <input type="text" name="message" placeholder="Your Message" class="w-full p-3 border rounded-lg">
-                <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg w-full font-bold hover:bg-blue-700">
-                    Book your free call!
-                </button>
-            </form>
+        
+            <!-- Calendly Booking Button -->
+            <button 
+                class="bg-green-600 text-white px-6 py-3 rounded-lg w-full font-bold hover:bg-green-700 mt-4"
+                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sarah-studio-partage'}); return false;">
+                📅 Book a Free Call
+            </button>
         </div>
+    </div>
 
 </body>
 </html>
